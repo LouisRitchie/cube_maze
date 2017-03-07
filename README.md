@@ -16,18 +16,18 @@ the struggle of living in under totalitarian governments, dictatorships, or othe
 
 5. Extra Polish: Here's a list.
 
-- Exciting, scary escape and hiding
-  - screen effects
-	- Twisting
-	- Zoom
-	- Color Distortion
-- Moody, scary environment
-  - Black walls, blood
-  - Super low lighting
-  - propaganda
-	- MELTFFY logo
-	- "assimilate" posters
-	- "resistance" carved into alleys?
-  - flashlight
+  - Exciting, scary escape and hiding
+	- screen effects
+	  - Twisting
+	  - Zoom
+	  - Color Distortion
+  - Moody, scary environment
+	- Black walls, blood
+	- Super low lighting
+	- propaganda
+	  - MELTFFY logo
+	  - "assimilate" posters
+	  - "resistance" carved into alleys?
+	- flashlight
 
 6. nutha map?!
