@@ -4,7 +4,6 @@ A game for Resist Jam 2017, a game jam with the theme of resisting totalitariani
 the struggle of living in under totalitarian governments, dictatorships, or other oppressive regimes.
 
 # TODO
-## TO BE COMPLETED IN ORDER!
 
 1. Camera that follows the player with rudimentary controls (good enough); one basic map
 
