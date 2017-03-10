@@ -24,10 +24,10 @@ public class Ending : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.E)) {
             if (isAtEnd) {
-           
-            print("You win you frekkin nerd!");
+                Time.timeScale = 0;
+                print("You win you frekkin nerd!");
                 }
-            Time.timeScale = 0;
+
         }
 
 
