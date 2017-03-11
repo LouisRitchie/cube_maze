@@ -8,6 +8,9 @@ public class MELTTFY : MonoBehaviour {
     public static bool seen = false;
     public float radius = 45;
     public Spotlight spot;
+    public AudioSource epicSong;
+    public AudioSource oldSong;
+
 
     void Start() {
         StartCoroutine(delayStartTime());
@@ -33,6 +36,8 @@ public class MELTTFY : MonoBehaviour {
         if (interactor.tag == "Player" && readyOrNot) {
             print("YOU BEEN SEEN, HOLY FUCK GET GOOD YOU PIECE OF SHIT!");
             seen = true;
+            oldSong.Stop();
+            epicSong.Play();
         }
     }
 
@@ -41,7 +46,9 @@ public class MELTTFY : MonoBehaviour {
             print("Ahh, the bliss of darkness...");
             seen = false;
             spot.forgetPlayerPosition();
-            
+            epicSong.Stop();
+            oldSong.Play();
+
         }
     }
 
