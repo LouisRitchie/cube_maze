@@ -8,6 +8,8 @@ public class Spotlight : MonoBehaviour {
     public float speed = 0.5f;
     public int angle = 20;
     public float waitTime = 0;
+    public GameObject player;
+    private Vector3 toPlayer;
 
     Quaternion startAngle;
     Quaternion endAngle;
@@ -19,14 +21,19 @@ public class Spotlight : MonoBehaviour {
 
     }
 
-    void Update() {
-        //StartCoroutine(searchlight());
+    void Update() {      
+        if (MELTTFY.seen) {
+            toPlayer = (player.transform.position-transform.position).normalized;
+            endAngle = Quaternion.LookRotation(toPlayer);
+
+        }
      
     }
 
     IEnumerator searchlight() {
         float counter = 0;
-        float travelDuration = 2f;
+        float travelDuration = 10f;
+        print("searching for you....");
         while (counter < travelDuration) {
 
             transform.rotation = Quaternion.Slerp(startAngle, endAngle, counter / travelDuration);
@@ -40,5 +47,7 @@ public class Spotlight : MonoBehaviour {
 
 
     }
+
+ 
 }
 
