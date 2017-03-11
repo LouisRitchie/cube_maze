@@ -7,7 +7,7 @@ public class Spotlight : MonoBehaviour {
     public int xrot = 150, yrot = 0, zrot = 100; //initial position of lightbeam
     public float speed = 0.5f;
     public int angle = 20;
-    public float waitTime = 0;
+    public float waitTime = 0.5f;
     public GameObject player;
     private Vector3 toPlayer;
 
