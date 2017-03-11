@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ending : MonoBehaviour {
     private bool isAtEnd = false;
-
+    public GameObject lights;
     
     void OnTriggerEnter(Collider interactor) {
         print("collided");
@@ -26,11 +26,18 @@ public class Ending : MonoBehaviour {
             if (isAtEnd) {
                 Time.timeScale = 0;
                 print("You win you frekkin nerd!");
+                lights.SetActive(true);
                 }
 
         }
 
 
+
+    }
+
+
+    void Start() {
+        lights.SetActive(false);
     }
 
 

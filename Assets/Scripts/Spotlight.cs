@@ -10,6 +10,7 @@ public class Spotlight : MonoBehaviour {
     public float waitTime = 0.5f;
     public GameObject player;
     private Vector3 toPlayer;
+    public float travelDuration = 10f;
 
     Quaternion startAngle;
     Quaternion endAngle;
@@ -32,7 +33,7 @@ public class Spotlight : MonoBehaviour {
 
     IEnumerator searchlight() {
         float counter = 0;
-        float travelDuration = 10f;
+        //float travelDuration = 10f;
         print("searching for you....");
         while (counter < travelDuration) {
 
@@ -51,6 +52,10 @@ public class Spotlight : MonoBehaviour {
     public void forgetPlayerPosition() {
         endAngle = Quaternion.Euler(xrot, yrot, zrot);
         print("I forget where you were. Going back to start position...");
+    }
+
+    public void setTravelDuration(float duration) {
+        travelDuration=duration;
     }
 
  
