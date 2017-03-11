@@ -48,6 +48,11 @@ public class Spotlight : MonoBehaviour {
 
     }
 
+    public void forgetPlayerPosition() {
+        endAngle = Quaternion.Euler(xrot, yrot, zrot);
+        print("I forget where you were. Going back to start position...");
+    }
+
  
 }
 

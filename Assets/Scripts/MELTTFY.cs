@@ -7,6 +7,7 @@ public class MELTTFY : MonoBehaviour {
     private bool readyOrNot = false;
     public static bool seen = false;
     public float radius = 45;
+    public Spotlight spot;
 
     void Start() {
         StartCoroutine(delayStartTime());
@@ -39,6 +40,8 @@ public class MELTTFY : MonoBehaviour {
         if (interactor.tag == "Player" && readyOrNot) {
             print("Ahh, the bliss of darkness...");
             seen = false;
+            spot.forgetPlayerPosition();
+            
         }
     }
 
