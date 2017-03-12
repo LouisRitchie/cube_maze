@@ -26,6 +26,7 @@ public class NewSong : MonoBehaviour {
             mELTTFY.GetComponent<Spotlight>().setTravelDuration(1f);
         }
         }
+    
                 
     
 

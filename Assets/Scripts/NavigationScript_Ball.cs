@@ -12,8 +12,8 @@ public class NavigationScript_Ball : MonoBehaviour {
     private Vector3 startPos;
     private Quaternion startRot;
     public GameObject eyeLight;
-    public AudioSource epicSong;
-    public AudioSource oldSong;
+   // public AudioSource epicSong;
+    //public AudioSource oldSong;
     private Vector3 rayCastDirection;
     bool wasSeen = false;
 
@@ -42,11 +42,12 @@ public class NavigationScript_Ball : MonoBehaviour {
                 {
                     gameObject.GetComponent<NavMeshAgent>().SetDestination(playerPos.transform.position);
                     eyeLight.SetActive(true);
-                    if (!epicSong.isPlaying)
-                    {
-                        oldSong.Stop();
-                        epicSong.Play();
-                    }
+                    MusicController.shouldPlay=true;
+                  //  if (!epicSong.isPlaying)
+                  //  {
+                  //      oldSong.Stop();
+                  //      epicSong.Play();
+                  //  }
                 }
                 if (chasing.collider.gameObject.tag != "Player" && !MELTTFY.seen)
                 {
@@ -54,11 +55,12 @@ public class NavigationScript_Ball : MonoBehaviour {
                     transform.rotation = startRot;
                     rayCastDirection = transform.forward;
                     eyeLight.SetActive(false);
-                    if (!oldSong.isPlaying)
-                    {
-                        epicSong.Stop();
-                        oldSong.Play();
-                    }
+                    // if (!oldSong.isPlaying)
+                    // {
+                    //  epicSong.Stop();
+                    //  oldSong.Play();
+                    //  }
+                    MusicController.shouldPlay=false;
                     wasSeen = false;
                 }
             }

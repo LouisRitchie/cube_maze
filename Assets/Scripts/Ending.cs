@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ending : MonoBehaviour {
     private bool isAtEnd = false;
     public GameObject lights;
+    public GameObject robot;
     
     void OnTriggerEnter(Collider interactor) {
         print("collided");
@@ -27,6 +28,7 @@ public class Ending : MonoBehaviour {
                 Time.timeScale = 0;
                 print("You win you frekkin nerd!");
                 lights.SetActive(true);
+                robot.SetActive(true);
                 }
 
         }
@@ -38,6 +40,7 @@ public class Ending : MonoBehaviour {
 
     void Start() {
         lights.SetActive(false);
+        robot.SetActive(false);
     }
 
 
